@@ -11,6 +11,6 @@ from project.app import app, init_db
 #     assert response.data == b"Hello, World!"
 
 
-def test_database():
-    init_db()
-    assert Path("flaskr.db").is_file()
+# def test_database():
+#     init_db()
+#     assert Path("flaskr.db").is_file()
