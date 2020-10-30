@@ -1,5 +1,4 @@
 import pytest
-import os
 from pathlib import Path
 import json
 
@@ -92,7 +91,7 @@ def test_login_required(client):
     rv = client.get("/delete/1")
     data = json.loads(rv.data)
     assert data["status"] == 0
-    assert data["message"] == 'Please log in.'
+    assert data["message"] == "Please log in."
     login(client, app.config["USERNAME"], app.config["PASSWORD"])
     rv = client.get("/delete/1")
     data = json.loads(rv.data)
